@@ -3,73 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tugas Kecerdasan Buatan - Muhammad Hussein Haekal</title>
+    <meta name="description" content="Tugas Pengkondisi Sinyal Sensor dan Kecerdasan Buatan oleh Muhammad Hussein Haekal">
+    <title>Tugas Sensor dan Kecerdasan Buatan - Muhammad Hussein Haekal</title>
     <style>
+        :root {
+            --primary-color: #1a237e;
+            --secondary-color: #283593;
+            --text-color: #333;
+            --background-color: #f5f5f5;
+            --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --spacing-unit: 1rem;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #f5f5f5;
+            color: var(--text-color);
+            background-color: var(--background-color);
         }
 
         header {
-            background-color: #1a237e;
+            background-color: var(--primary-color);
             color: white;
-            padding: 2rem;
+            padding: calc(var(--spacing-unit) * 2);
             text-align: center;
+            box-shadow: var(--card-shadow);
         }
 
         .biodata {
-            background-color: #283593;
+            background-color: var(--secondary-color);
             color: white;
-            padding: 1rem;
+            padding: var(--spacing-unit);
             text-align: center;
+            margin-bottom: calc(var(--spacing-unit) * 2);
+        }
+
+        .biodata h2 {
+            margin-bottom: calc(var(--spacing-unit) * 0.5);
         }
 
         main {
             max-width: 800px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: calc(var(--spacing-unit) * 2);
+        }
+
+        .assignment-section {
+            margin-bottom: calc(var(--spacing-unit) * 3);
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            margin-bottom: calc(var(--spacing-unit) * 1.5);
+            font-size: 1.5rem;
+            text-align: center;
         }
 
         .question-card {
             background-color: white;
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            padding: calc(var(--spacing-unit) * 1.5);
+            margin-bottom: calc(var(--spacing-unit) * 2);
+            box-shadow: var(--card-shadow);
+            transition: transform 0.2s ease;
+        }
+
+        .question-card:hover {
+            transform: translateY(-2px);
         }
 
         .question {
-            color: #1a237e;
+            color: var(--primary-color);
             font-weight: bold;
-            margin-bottom: 1rem;
+            margin-bottom: var(--spacing-unit);
+            font-size: 1.1rem;
         }
 
         .answer {
             text-align: justify;
         }
 
+        .answer p {
+            margin-bottom: calc(var(--spacing-unit) * 0.5);
+        }
+
+        .answer strong {
+            color: var(--primary-color);
+        }
+
         @media (max-width: 600px) {
+            :root {
+                --spacing-unit: 0.875rem;
+            }
+
             main {
-                padding: 1rem;
+                padding: var(--spacing-unit);
             }
 
             .question-card {
-                padding: 1rem;
+                padding: var(--spacing-unit);
+                margin-bottom: var(--spacing-unit);
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text-color: #e0e0e0;
+                --background-color: #121212;
+            }
+
+            .question-card {
+                background-color: #1e1e1e;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Tugas Kecerdasan Buatan</h1>
+        <h1>Tugas Sensor dan Kecerdasan Buatan</h1>
     </header>
     
     <div class="biodata">
@@ -79,54 +136,106 @@
     </div>
 
     <main>
-        <div class="question-card">
-            <div class="question">1. Jelaskan komponen-komponen apa saja yang diperlukan untuk mengaplikasikan kecerdasan buatan!</div>
-            <div class="answer">
-                <p>Komponen-komponen yang diperlukan untuk mengaplikasikan kecerdasan buatan meliputi:</p>
-                <br>
-                <p>1. <strong>Data</strong> - Merupakan komponen fundamental yang digunakan untuk melatih sistem AI. Data harus berkualitas, terstruktur, dan representatif terhadap masalah yang ingin diselesaikan.</p>
-                <br>
-                <p>2. <strong>Algoritma</strong> - Serangkaian aturan dan metode yang digunakan untuk memproses data dan membuat keputusan. Ini mencakup algoritma machine learning, deep learning, dan berbagai metode AI lainnya.</p>
-                <br>
-                <p>3. <strong>Komputasi</strong> - Infrastruktur hardware dan software yang memadai untuk menjalankan algoritma AI, termasuk processor, GPU, dan sistem penyimpanan.</p>
-                <br>
-                <p>4. <strong>Basis Pengetahuan</strong> - Kumpulan informasi dan aturan yang digunakan sistem AI untuk membuat keputusan dan menyelesaikan masalah.</p>
-                <br>
-                <p>5. <strong>Antarmuka</strong> - Komponen yang memungkinkan interaksi antara sistem AI dengan pengguna atau sistem lain.</p>
+        <section class="assignment-section">
+            <h2 class="section-title">Tugas 1: Pengkondisi Sinyal Sensor (Penguatan)</h2>
+            
+            <div class="question-card">
+                <div class="question">1. Apa yang dimaksud dengan pengkondisi sinyal sensor?</div>
+                <div class="answer">
+                    <p><strong>Pengkondisi sinyal sensor</strong> adalah rangkaian elektronik yang berfungsi untuk mengubah dan memanipulasi sinyal keluaran dari sensor menjadi bentuk yang lebih sesuai untuk pemrosesan lebih lanjut. Fungsi utamanya adalah meningkatkan kualitas sinyal dan menyesuaikan karakteristik sinyal agar dapat diproses oleh sistem pengukuran atau kontrol.</p>
+                </div>
             </div>
-        </div>
 
-        <div class="question-card">
-            <div class="question">2. Jelaskan untuk apa pengaplikasian kecerdasan buatan dalam kehidupan sehari-hari! Berikan contoh yang terdapat dalam kehidupan sehari-hari tentang sistem cerdas yang berkaitan dengan bidang Pemahaman Ucapan/Suara (Speech/Voice Understanding)!</div>
-            <div class="answer">
-                <p>Kecerdasan buatan dalam kehidupan sehari-hari diaplikasikan untuk mempermudah dan mengotomatisasi berbagai aktivitas manusia. Khusus untuk bidang Pemahaman Ucapan/Suara, beberapa contoh aplikasinya adalah:</p>
-                <br>
-                <p>1. <strong>Asisten Virtual</strong> - Seperti Siri, Google Assistant, dan Alexa yang dapat memahami perintah suara untuk mengatur alarm, membuat pengingat, memutar musik, atau menjawab pertanyaan.</p>
-                <br>
-                <p>2. <strong>Sistem Transkripsi</strong> - Aplikasi yang dapat mengubah ucapan menjadi teks, sangat membantu dalam mencatat rapat atau kuliah.</p>
-                <br>
-                <p>3. <strong>Sistem Navigasi Suara</strong> - Digunakan dalam aplikasi peta dan navigasi yang dapat menerima perintah suara untuk menentukan tujuan dan memberikan petunjuk arah.</p>
-                <br>
-                <p>4. <strong>Smart Home Devices</strong> - Perangkat rumah pintar yang dapat dikontrol melalui perintah suara untuk mengatur pencahayaan, suhu, atau perangkat elektronik lainnya.</p>
+            <div class="question-card">
+                <div class="question">2. Jelaskan mengapa data masukan yang diterima oleh sensor perlu penguatan!</div>
+                <div class="answer">
+                    <p>Data masukan dari sensor memerlukan penguatan karena beberapa alasan penting:</p>
+                    <p>1. <strong>Sinyal Lemah</strong> - Kebanyakan sensor menghasilkan sinyal yang sangat kecil (dalam orde mV atau µV) yang sulit dideteksi dan diproses langsung.</p>
+                    <p>2. <strong>Noise Elimination</strong> - Penguatan membantu meningkatkan Signal-to-Noise Ratio (SNR) sehingga sinyal yang diinginkan lebih mudah dibedakan dari noise.</p>
+                    <p>3. <strong>Kompatibilitas Sistem</strong> - Sistem pemrosesan seperti ADC membutuhkan level sinyal tertentu untuk dapat bekerja optimal.</p>
+                    <p>4. <strong>Akurasi Pengukuran</strong> - Sinyal yang lebih kuat memungkinkan pengukuran yang lebih akurat dan presisi.</p>
+                </div>
             </div>
-        </div>
 
-        <div class="question-card">
-            <div class="question">3. Mengapa kecerdasan buatan digunakan untuk membantu kegiatan manusia? Jelaskan!</div>
-            <div class="answer">
-                <p>Kecerdasan buatan digunakan untuk membantu kegiatan manusia karena beberapa alasan penting:</p>
-                <br>
-                <p>1. <strong>Efisiensi dan Produktivitas</strong> - AI dapat mengerjakan tugas-tugas repetitif dengan cepat dan akurat, memungkinkan manusia untuk fokus pada pekerjaan yang membutuhkan kreativitas dan pemikiran strategis.</p>
-                <br>
-                <p>2. <strong>Keakuratan</strong> - AI dapat memproses dan menganalisis data dalam jumlah besar dengan tingkat kesalahan yang minimal, menghasilkan keputusan yang lebih tepat dan berbasis data.</p>
-                <br>
-                <p>3. <strong>Availability 24/7</strong> - Sistem AI dapat bekerja terus-menerus tanpa lelah, memberikan layanan dan dukungan sepanjang waktu.</p>
-                <br>
-                <p>4. <strong>Peningkatan Keamanan</strong> - AI dapat membantu dalam sistem keamanan, deteksi fraud, dan pencegahan kejahatan dengan kemampuan analisis pola yang superior.</p>
-                <br>
-                <p>5. <strong>Inovasi</strong> - AI membuka peluang untuk solusi-solusi baru dalam berbagai bidang seperti kesehatan, pendidikan, dan transportasi, yang sebelumnya tidak mungkin dilakukan.</p>
+            <div class="question-card">
+                <div class="question">3. Berikan contoh proses penguatan yang dilakukan!</div>
+                <div class="answer">
+                    <p>Beberapa contoh proses penguatan yang umum dilakukan:</p>
+                    <p>1. <strong>Penguatan Operasional (Op-Amp)</strong> - Menggunakan rangkaian op-amp untuk menguatkan sinyal dari thermocouple yang menghasilkan tegangan sangat kecil (µV) menjadi level volt.</p>
+                    <p>2. <strong>Instrumentasi Amplifier</strong> - Digunakan pada sensor strain gauge untuk menguatkan sinyal tekanan yang sangat kecil dengan noise rejection yang baik.</p>
+                    <p>3. <strong>Differential Amplifier</strong> - Pada sensor jembatan Wheatstone untuk menguatkan perbedaan tegangan yang kecil menjadi sinyal yang dapat dibaca.</p>
+                    <p>4. <strong>Pre-Amplifier</strong> - Pada sensor mikrofon untuk menguatkan sinyal audio yang lemah sebelum pemrosesan lebih lanjut.</p>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <section class="assignment-section">
+            <h2 class="section-title">Tugas 2: Pengaplikasi Kecerdasan Buatan</h2>
+            
+            <div class="question-card">
+                <div class="question">1. Jelaskan komponen-komponen apa saja yang diperlukan untuk mengaplikasikan kecerdasan buatan!</div>
+                <div class="answer">
+                    <p>Komponen-komponen yang diperlukan untuk mengaplikasikan kecerdasan buatan meliputi:</p>
+                    <p>1. <strong>Data</strong> - Merupakan komponen fundamental yang digunakan untuk melatih sistem AI. Data harus berkualitas, terstruktur, dan representatif.</p>
+                    <p>2. <strong>Algoritma</strong> - Serangkaian aturan dan metode untuk memproses data dan membuat keputusan, termasuk algoritma machine learning dan deep learning.</p>
+                    <p>3. <strong>Komputasi</strong> - Infrastruktur hardware dan software yang memadai, termasuk processor, GPU, dan sistem penyimpanan.</p>
+                    <p>4. <strong>Basis Pengetahuan</strong> - Kumpulan informasi dan aturan untuk membuat keputusan dan menyelesaikan masalah.</p>
+                    <p>5. <strong>Antarmuka</strong> - Komponen yang memungkinkan interaksi antara sistem AI dengan pengguna atau sistem lain.</p>
+                </div>
+            </div>
+
+            <div class="question-card">
+                <div class="question">2. Jelaskan untuk apa pengaplikasian kecerdasan buatan dalam kehidupan sehari-hari! Berikan contoh yang terdapat dalam kehidupan sehari-hari tentang sistem cerdas yang berkaitan dengan bidang Pemahaman Ucapan/Suara!</div>
+                <div class="answer">
+                    <p>Kecerdasan buatan dalam kehidupan sehari-hari diaplikasikan untuk mempermudah dan mengotomatisasi berbagai aktivitas. Contoh dalam bidang Pemahaman Ucapan/Suara meliputi:</p>
+                    <p>1. <strong>Asisten Virtual</strong> - Seperti Siri, Google Assistant, dan Alexa untuk mengatur alarm, membuat pengingat, dan menjawab pertanyaan.</p>
+                    <p>2. <strong>Sistem Transkripsi</strong> - Mengubah ucapan menjadi teks untuk pencatatan rapat atau kuliah.</p>
+                    <p>3. <strong>Sistem Navigasi Suara</strong> - Dalam aplikasi peta untuk menerima perintah suara dan memberikan petunjuk arah.</p>
+                    <p>4. <strong>Smart Home Devices</strong> - Kontrol perangkat rumah pintar melalui perintah suara.</p>
+                </div>
+            </div>
+
+            <div class="question-card">
+                <div class="question">3. Mengapa kecerdasan buatan digunakan untuk membantu kegiatan manusia? Jelaskan!</div>
+                <div class="answer">
+                    <p>Kecerdasan buatan digunakan untuk membantu kegiatan manusia karena beberapa alasan penting:</p>
+                    <p>1. <strong>Efisiensi dan Produktivitas</strong> - AI dapat mengerjakan tugas repetitif dengan cepat dan akurat.</p>
+                    <p>2. <strong>Keakuratan</strong> - AI dapat memproses data dalam jumlah besar dengan tingkat kesalahan minimal.</p>
+                    <p>3. <strong>Availability 24/7</strong> - Sistem AI dapat bekerja terus-menerus tanpa lelah.</p>
+                    <p>4. <strong>Peningkatan Keamanan</strong> - AI membantu dalam sistem keamanan dan deteksi fraud.</p>
+                    <p>5. <strong>Inovasi</strong> - AI membuka peluang untuk solusi-solusi baru dalam berbagai bidang.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="assignment-section">
+            <h2 class="section-title">Tugas 3: Bidang Aplikasi Kecerdasan Buatan</h2>
+            
+            <div class="question-card">
+                <div class="question">1. Jelaskan bidang sistem cerdas yang banyak dikembangkan saat ini?</div>
+                <div class="answer">
+                    <p>Beberapa bidang sistem cerdas yang sedang berkembang pesat:</p>
+                    <p>1. <strong>Computer Vision</strong> - Pengembangan sistem yang dapat memahami dan menganalisis gambar dan video.</p>
+                    <p>2. <strong>Natural Language Processing</strong> - Pemahaman dan pemrosesan bahasa manusia oleh komputer.</p>
+                    <p>3. <strong>Robotika</strong> - Pengembangan robot cerdas untuk berbagai aplikasi.</p>
+                    <p>4. <strong>Machine Learning</strong> - Sistem yang dapat belajar dari data dan pengalaman.</p>
+                    <p>5. <strong>Expert Systems</strong> - Sistem yang dapat meniru pengambilan keputusan pakar.</p>
+                    <p>6. <strong>Speech Recognition</strong> - Teknologi pengenalan dan pemahaman suara.</p>
+                </div>
+            </div>
+
+            <div class="question-card">
+                <div class="question">2. Berikan contoh yang terdapat dalam kehidupan sehari-hari tentang sistem cerdas yang berkaitan dengan bidang Pemahaman Ucapan/Suara!</div>
+                <div class="answer">
+                    <p>Contoh implementasi sistem cerdas dalam pemahaman ucapan/suara:</p>
+                    <p>1. <strong>Virtual Meeting Assistants</strong> - Sistem yang dapat mentranskripsikan dan merangkum rapat virtual secara otomatis.</p>
+                    <p>2. <strong>Voice-Controlled Entertainment</strong> - Sistem smart TV dan pemutar musik yang dikendalikan suara.</p>
+                    <p>3. <strong>Language Learning Apps</strong> - Aplikasi pembelajaran bahasa dengan fitur pengenalan pengucapan.</p>
+                    <p>4. <strong>Voice Authentication</strong> - Sistem keamanan yang menggunakan pengenalan suara untuk verifikasi identitas.</p>
+                    <p>5. <strong>Auto-Captioning</strong> - Sistem yang menghasilkan teks otomatis dari audio/video untuk aksesibilitas.</p>
+                </div>
+            </div>
+        </section>
     </main>
 </body>
 </html>
